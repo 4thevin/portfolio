@@ -8,15 +8,23 @@ import {
 } from "@mui/material";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 
-const pages = ["Home", "Projects", "Resume", "Contact"];
+const pages = ["Home", "Projects", "Resume"];
 
 const Header = () => {
   const location = useLocation();
 
   return (
     <AppBar
-      position={"fixed"}
-      sx={{ background: "transparent", boxShadow: "none" }}
+      position="sticky"
+      sx={{
+        top: 0,
+        background: "transparent",
+        boxShadow: "none",
+        backdropFilter: "blur(8px)",
+        zIndex: (theme) => theme.zIndex.appBar,
+      }}
+      // position={"fixed"}
+      // sx={{ background: "transparent", boxShadow: "none", zIndex: 1500 }}
     >
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box display={"flex"} sx={{ width: "200px" }}>

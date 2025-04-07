@@ -1,9 +1,31 @@
 import { Box, Grid, Typography } from "@mui/material";
 import ProjectCard from "../components/ProjectCard";
+import { motion } from "framer-motion";
+
+const projectData = [
+  {
+    title: "EV Charger Finder",
+    description:
+      "Find public EV charging stations near any ZIP code in the US, built with React, TypeScript, MUI and Java.",
+    image: "public/EvChargerHomePageSS.png",
+    link: "https://ev-chargers-pi.vercel.app",
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "A modern, design-focused developer portfolio built with React, TypeScript, MUI, and Framer Motion. You're on it right now! Under active development.",
+    image: "/public/porfolioWebsitePic.png",
+    link: "https://your-portfolio-site.com",
+  },
+];
 
 const Projects = () => {
   return (
     <Box
+      component={motion.div}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.1, duration: 0.3 }}
       display="flex"
       alignItems="center"
       justifyContent="center"
@@ -29,14 +51,11 @@ const Projects = () => {
       </Typography>
 
       <Grid container spacing={4} justifyContent="center">
-        <Grid>
-          <ProjectCard
-            title="EV Charger Finder"
-            description="Find public EV charging stations near any ZIP code in the US."
-            image="public/EvChargerHomePageSS.png"
-            link="https://ev-chargers-pi.vercel.app"
-          />
-        </Grid>
+        {projectData.map((project, index) => (
+          <Grid key={index}>
+            <ProjectCard {...project} />
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );

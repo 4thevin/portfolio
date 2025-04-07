@@ -3,6 +3,9 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   typography: {
     fontFamily: `'Space Grotesk', sans-serif`,
+    allVariants: {
+      color: "#F7FFF7",
+    },
   },
   components: {
     MuiCssBaseline: {
