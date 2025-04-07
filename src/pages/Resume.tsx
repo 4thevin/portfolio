@@ -60,6 +60,7 @@ const Resume = () => {
       maxWidth={false}
       sx={{
         py: 6,
+        height: "100%",
         color: "#F7FFF7",
         background:
           "linear-gradient(-45deg, #2F2F2F, #320E3B, #0C1B33, #7A306C)",
@@ -76,7 +77,7 @@ const Resume = () => {
       >
         <Typography
           variant="body1"
-          sx={{ color: "#F7FFF7", fontSize: "18px", mt: 4, mb: 4 }}
+          sx={{ color: "#F7FFF7", fontSize: "24px", mt: 4, mb: 4 }}
         >
           A snapshot of my experience, education, and credentials. I’m driven by
           a mission to deliver impactful, secure, and scalable solutions in
@@ -103,14 +104,18 @@ const Resume = () => {
                   mb: 8,
                   fontFamily: "'Orbitron', sans-serif",
                   pr: 2,
+                  fontSize: "16px",
                 }}
                 align="right"
                 variant="body2"
               >
-                <Typography variant="h6" sx={{ color: "#F7FFF7" }}>
+                <Typography
+                  variant="h6"
+                  sx={{ color: "#F7FFF7", fontSize: "22px" }}
+                >
                   {exp.company}
                 </Typography>
-                <Typography variant="subtitle2">
+                <Typography variant="subtitle2" sx={{ fontSize: "18px" }}>
                   {exp.posAndTimeline}
                 </Typography>
               </TimelineOppositeContent>
@@ -128,7 +133,9 @@ const Resume = () => {
                     p: 2,
                   }}
                 >
-                  <Typography variant="body2">{exp.summary}</Typography>
+                  <Typography variant="body2" sx={{ fontSize: "18px" }}>
+                    {exp.summary}
+                  </Typography>
                   <Box
                     sx={{
                       mt: 0.5,
@@ -146,6 +153,7 @@ const Resume = () => {
                           backgroundColor: "#857F74",
                           color: "#181f1c",
                           fontWeight: 500,
+                          fontSize: "14px",
                         }}
                       />
                     ))}
@@ -172,10 +180,16 @@ const Resume = () => {
         <Timeline position="alternate-reverse">
           <TimelineItem>
             <TimelineOppositeContent align="right">
-              <Typography variant="subtitle1" sx={{ color: "#F7FFF7" }}>
+              <Typography
+                variant="subtitle1"
+                sx={{ color: "#F7FFF7", fontSize: "20px" }}
+              >
                 Brooklyn College
               </Typography>
-              <Typography variant="subtitle2" sx={{ color: "#ACB0BD" }}>
+              <Typography
+                variant="subtitle2"
+                sx={{ color: "#ACB0BD", fontSize: "20px" }}
+              >
                 B.S. in Computer Science | 2020
               </Typography>
             </TimelineOppositeContent>
@@ -185,7 +199,7 @@ const Resume = () => {
               </TimelineDot>
             </TimelineSeparator>
             <TimelineContent>
-              <Typography variant="body2">
+              <Typography variant="body2" sx={{ fontSize: "20px" }}>
                 Emphasis on software engineering, full-stack development, and
                 algorithmic thinking. Capstone explored ML-enhanced
                 visualizations.
@@ -210,20 +224,22 @@ const Resume = () => {
         <Box sx={{ ml: 2 }}>
           <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 2 }}>
             <Shield fontSize="small" />
-            <Typography variant="subtitle1">
+            <Typography variant="subtitle1" sx={{ fontSize: "20px" }}>
               AWS Certified Cloud Practitioner (2023)
             </Typography>
           </Box>
-          <Typography variant="body2" sx={{ ml: 4, mb: 2 }}>
+          <Typography variant="body2" sx={{ ml: 4, mb: 2, fontSize: "20px" }}>
             Validated understanding of core AWS services, billing, and cloud
             architecture principles.
           </Typography>
 
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <Shield fontSize="small" />
-            <Typography variant="subtitle1">CompTIA Security+</Typography>
+            <Typography variant="subtitle1" sx={{ fontSize: "20px" }}>
+              CompTIA Security+
+            </Typography>
           </Box>
-          <Typography variant="body2" sx={{ ml: 4 }}>
+          <Typography variant="body2" sx={{ ml: 4, fontSize: "20px" }}>
             Foundations of secure development, risk mitigation, and network
             security principles.
           </Typography>

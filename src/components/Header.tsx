@@ -15,16 +15,12 @@ const Header = () => {
 
   return (
     <AppBar
-      position="sticky"
+      position={"fixed"}
       sx={{
-        top: 0,
         background: "transparent",
         boxShadow: "none",
-        backdropFilter: "blur(8px)",
-        zIndex: (theme) => theme.zIndex.appBar,
+        backdropFilter: "blur(4px)",
       }}
-      // position={"fixed"}
-      // sx={{ background: "transparent", boxShadow: "none", zIndex: 1500 }}
     >
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box display={"flex"} sx={{ width: "200px" }}>
