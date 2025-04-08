@@ -16,7 +16,7 @@ const projectData = [
     description:
       "A modern, design-focused developer portfolio built with React, TypeScript, MUI, and Framer Motion. You're on it right now! Under active development.",
     image: "/porfolioWebsitePic.png",
-    link: "https://your-portfolio-site.com",
+    link: "https://www.vforegard.dev",
   },
 ];
 
