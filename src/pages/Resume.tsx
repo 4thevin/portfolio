@@ -60,11 +60,11 @@ const Resume = () => {
       maxWidth={false}
       sx={{
         py: 6,
-        height: "100%",
+        height: "auto",
         color: "#F7FFF7",
         background:
           "linear-gradient(-45deg, #2F2F2F, #320E3B, #0C1B33, #7A306C)",
-        backgroundSize: "600% 600%",
+        backgroundSize: "400% 400%",
         animation: "gradientShift 16s ease infinite",
       }}
     >
