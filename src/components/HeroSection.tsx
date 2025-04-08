@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
+import BackgroundEffects from "./BackgroundEffects.tsx";
 
 const HeroSection = () => {
   const theme = useTheme();
@@ -38,6 +39,8 @@ const HeroSection = () => {
         padding: 4,
       }}
     >
+      <BackgroundEffects />
+
       <Avatar
         alt="VF"
         src="/AvatarPic2.png"

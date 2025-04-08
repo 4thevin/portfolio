@@ -1,6 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import ProjectCard from "../components/ProjectCard";
 import { motion } from "framer-motion";
+import BackgroundEffects from "../components/BackgroundEffects.tsx";
 
 const projectData = [
   {
@@ -47,6 +48,7 @@ const Projects = () => {
         padding: 4,
       }}
     >
+      <BackgroundEffects />
       <Typography variant="h4" mb={4} mt={4}>
         Featured Projects
       </Typography>

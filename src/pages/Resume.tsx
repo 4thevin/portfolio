@@ -84,7 +84,6 @@ const Resume = () => {
           service of the warfighter.
         </Typography>
       </Box>
-
       {/* Experience */}
       <Box
         component={motion.div}
@@ -164,7 +163,6 @@ const Resume = () => {
           ))}
         </Timeline>
       </Box>
-
       {/* Education */}
       <Divider sx={{ my: 6, backgroundColor: "#857F74" }} />
       <Box
@@ -208,7 +206,6 @@ const Resume = () => {
           </TimelineItem>
         </Timeline>
       </Box>
-
       {/* Certifications */}
       <Divider sx={{ my: 6, backgroundColor: "#857F74" }} />
       <Box
