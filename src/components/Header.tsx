@@ -28,7 +28,7 @@ const Header = () => {
             <>
               <Avatar
                 alt="VF"
-                src="public/AvatarPic2.png"
+                src="/AvatarPic2.png"
                 sx={{ width: 32, height: 32, objectFit: "cover" }}
               />
               <Typography

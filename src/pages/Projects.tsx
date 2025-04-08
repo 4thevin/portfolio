@@ -7,14 +7,14 @@ const projectData = [
     title: "EV Charger Finder",
     description:
       "Find public EV charging stations near any ZIP code in the US, built with React, TypeScript, MUI and Java.",
-    image: "public/EvChargerHomePageSS.png",
+    image: "/EvChargerHomePageSS.png",
     link: "https://ev-chargers-pi.vercel.app",
   },
   {
     title: "Portfolio Website",
     description:
       "A modern, design-focused developer portfolio built with React, TypeScript, MUI, and Framer Motion. You're on it right now! Under active development.",
-    image: "/public/porfolioWebsitePic.png",
+    image: "/porfolioWebsitePic.png",
     link: "https://your-portfolio-site.com",
   },
 ];

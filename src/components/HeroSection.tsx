@@ -35,7 +35,7 @@ const HeroSection = () => {
     >
       <Avatar
         alt="VF"
-        src="public/AvatarPic2.png"
+        src="/AvatarPic2.png"
         sx={{ width: 80, height: 80, objectFit: "cover" }}
       />
       <Typography
@@ -97,7 +97,7 @@ const HeroSection = () => {
         <Tooltip title="Send Email">
           <IconButton
             aria-label="Email"
-            onClick={() => window.open("mailto:your.email@example.com")}
+            onClick={() => window.open("mailto:dannyomicron900@gmail.com")}
             sx={{
               color: "#F7FFF7",
               transition: "0.3s",
