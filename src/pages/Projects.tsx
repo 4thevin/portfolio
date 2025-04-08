@@ -32,7 +32,8 @@ const Projects = () => {
       minHeight="100vh"
       width="100vw"
       sx={{
-        height: "100vh",
+        height: "auto",
+        py: 6,
         width: "100vw",
         background:
           "linear-gradient(-45deg, #2F2F2F, #320E3B, #0C1B33, #7A306C)",
@@ -46,7 +47,7 @@ const Projects = () => {
         padding: 4,
       }}
     >
-      <Typography variant="h4" mb={4}>
+      <Typography variant="h4" mb={4} mt={4}>
         Featured Projects
       </Typography>
 
