@@ -5,13 +5,19 @@ import {
   Stack,
   Tooltip,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import { motion } from "framer-motion";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
+import BackgroundEffects from "./BackgroundEffects.tsx";
 
 const HeroSection = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Box
       component={motion.div}
@@ -19,7 +25,7 @@ const HeroSection = () => {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       sx={{
-        height: "100vh",
+        height: "auto",
         width: "100vw",
         background:
           "linear-gradient(-45deg, #2F2F2F, #320E3B, #0C1B33, #7A306C)",
@@ -33,10 +39,12 @@ const HeroSection = () => {
         padding: 4,
       }}
     >
+      <BackgroundEffects />
+
       <Avatar
         alt="VF"
-        src="public/AvatarPic2.png"
-        sx={{ width: 80, height: 80, objectFit: "cover" }}
+        src="/AvatarPic2.png"
+        sx={{ width: 80, height: 80, objectFit: "cover", mt: 8 }}
       />
       <Typography
         component={motion.h1}
@@ -55,7 +63,7 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.6 }}
-        variant="h5"
+        variant={isMobile ? "body1" : "h5"}
         sx={{ color: "#857F74", mb: 1.5 }}
       >
         Full Stack Developer | Design-Centric Thinker
@@ -97,7 +105,7 @@ const HeroSection = () => {
         <Tooltip title="Send Email">
           <IconButton
             aria-label="Email"
-            onClick={() => window.open("mailto:your.email@example.com")}
+            onClick={() => window.open("mailto:dannyomicron900@gmail.com")}
             sx={{
               color: "#F7FFF7",
               transition: "0.3s",

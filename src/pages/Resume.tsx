@@ -1,4 +1,12 @@
-import { Box, Chip, Container, Divider, Typography } from "@mui/material";
+import {
+  Box,
+  Chip,
+  Container,
+  Divider,
+  IconButton,
+  Tooltip,
+  Typography,
+} from "@mui/material";
 import {
   Timeline,
   TimelineConnector,
@@ -10,6 +18,7 @@ import {
 } from "@mui/lab";
 import { motion } from "framer-motion";
 import { School, Shield } from "@mui/icons-material";
+import DownloadIcon from "@mui/icons-material/Download";
 
 const experience = [
   {
@@ -60,11 +69,11 @@ const Resume = () => {
       maxWidth={false}
       sx={{
         py: 6,
-        height: "100%",
+        height: "auto",
         color: "#F7FFF7",
         background:
           "linear-gradient(-45deg, #2F2F2F, #320E3B, #0C1B33, #7A306C)",
-        backgroundSize: "600% 600%",
+        backgroundSize: "400% 400%",
         animation: "gradientShift 16s ease infinite",
       }}
     >
@@ -84,7 +93,6 @@ const Resume = () => {
           service of the warfighter.
         </Typography>
       </Box>
-
       {/* Experience */}
       <Box
         component={motion.div}
@@ -164,7 +172,6 @@ const Resume = () => {
           ))}
         </Timeline>
       </Box>
-
       {/* Education */}
       <Divider sx={{ my: 6, backgroundColor: "#857F74" }} />
       <Box
@@ -208,7 +215,6 @@ const Resume = () => {
           </TimelineItem>
         </Timeline>
       </Box>
-
       {/* Certifications */}
       <Divider sx={{ my: 6, backgroundColor: "#857F74" }} />
       <Box
@@ -244,6 +250,51 @@ const Resume = () => {
             security principles.
           </Typography>
         </Box>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Tooltip title={"Download Resume"}>
+          <Box
+            component={"a"}
+            href={"/ForegardResume.pdf"}
+            target={"_blank"}
+            rel="noopener noreferrer"
+            sx={{
+              textDecoration: "none",
+            }}
+          >
+            <IconButton
+              component={motion.button}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              sx={{
+                color: "#F7FFF7",
+                backgroundColor: "rgba(255,255,255,0.05)",
+                px: 2,
+                py: 1,
+                mt: 4,
+                borderRadius: 2,
+                fontSize: "18px",
+                display: "flex",
+                alignItems: "center",
+                gap: 1,
+                fontFamily: "'Space Grotesk', sans-serif",
+                transition: "0.3s",
+                "&:hover": {
+                  backgroundColor: "#857F74",
+                  color: "#181f1c",
+                },
+              }}
+            >
+              Resume <DownloadIcon />
+            </IconButton>
+          </Box>
+        </Tooltip>
       </Box>
     </Container>
   );
